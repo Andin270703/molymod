@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuis Ikatan Kimia</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Kuis interaktif tentang ikatan kimia untuk meningkatkan pemahaman Anda.">
+    <meta name="keywords" content="kuis, ikatan kimia, kimia, pendidikan">
     <!-- Favicons -->
-<link href="assets/img/lo.png" rel="icon">
-<link href="assets/img/lo.png" rel="apple-touch-icon">
+    <link href="assets/img/lo.png" rel="icon">
+    <link href="assets/img/lo.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="assets/vendor/aos/aos.css" rel="stylesheet">
-<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-<!-- Main CSS File -->
-<link href="assets/css/main.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Nunito', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -42,15 +42,17 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
         .question {
             margin: 20px 0;
         }
         .options {
             margin: 10px 0;
+            display: flex;
+            flex-direction: column;
         }
         .option {
             margin: 5px 0;
+            display: block;
         }
         .option input {
             margin-right: 10px;
@@ -85,170 +87,146 @@
             color: #a94442;
         }
     </style>
-
-
 </head>
 <body>
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container position-relative d-flex align-items-center">
-    
-          <a href="index.html" class="logo d-flex align-items-center me-auto">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1 class="sitename">Molymod</h1><span>.</span>
-          </a>
-    
-          <nav id="navmenu" class="navmenu">
-            <ul>
-              <li><a href="#hero">Home</a></li>
-              <li class="dropdown"><a href="about.html" class="active"><span>Materi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Molymod</h1><span>.</span>
+            </a>
+            <nav id="navmenu" class="navmenu">
                 <ul>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="testimonials.html">Kuis</a></li>
-                  </i></a>
-                  </li>
+                    <li><a href="#hero">Home</a></li>
+                    <li class="dropdown"><a href="about.html" class="active"><span>Materi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="testimonials.html">Kuis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://app.molview.com/">Simulasi</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-              </li>
-              
-              
-              <li><a href="https://app.molview.com/">Simulasi</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav>
-    
-          <div class="header-social-links">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-    
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <div class="header-social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
         </div>
-      </header>
-      <main class="main">
-
+    </header>
+    <main class="main">
         <section id="team" class="team section">
-    <div class="container">
-        <h1>Kuis Ikatan Kimia</h1>
-
-        <form id="quizForm">
-            <!-- Questions -->
-            <div class="question">
-                <h3>Soal 1</h3>
-                <p>Manakah ikatan terkuat di antara berikut ini?</p>
-                <div class="options">
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1" value="a"> Ikatan ion
-                        </label>
+            <div class="container">
+                <h1>Kuis Ikatan Kimia</h1>
+                <form id="quizForm">
+                    <div class="question">
+                        <h3>Soal 1</h3>
+                        <p>Manakah ikatan terkuat di antara berikut ini?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q1" value="a"> Ikatan ion</label>
+                            <label class="option"><input type="radio" name="q1" value="b"> Ikatan kovalen</label>
+                            <label class="option"><input type="radio" name="q1" value="c"> Ikatan logam</label>
+                            <label class="option"><input type="radio" name="q1" value="d"> Ikatan hidrogen</label>
+                        </div>
                     </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1" value="b"> Ikatan kovalen
-                        </label>
+                    <div class="question">
+                        <h3>Soal 2</h3>
+                        <p>Atom mana yang paling elektronegatif?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q2" value="a"> Fluor</label>
+                            <label class="option"><input type="radio" name="q2" value="b"> Hidrogen</label>
+                            <label class="option"><input type="radio" name="q2" value="c"> Karbon</label>
+                            <label class="option"><input type="radio" name="q2" value="d"> Oksigen</label>
+                        </div>
                     </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1" value="c"> Ikatan logam
-                        </label>
+                    <div class="question">
+                        <h3>Soal 3</h3>
+                        <p>Ikatan hidrogen terjadi antara atom H dan?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q3" value="a"> Atom elektronegatif seperti F, O, N</label>
+                            <label class="option"><input type="radio" name="q3" value="b"> Atom logam</label>
+                            <label class="option"><input type="radio" name="q3" value="c"> Atom hidrogen lainnya</label>
+                            <label class="option"><input type="radio" name="q3" value="d"> Atom ion negatif</label>
+                        </div>
                     </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q1" value="d"> Ikatan hidrogen
-                        </label>
+                    <div class="question">
+                        <h3>Soal 4</h3>
+                        <p>Manakah pernyataan yang benar mengenai ikatan hidrogen?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q4" value="a"> Terjadi pada molekul non-polar</label>
+                            <label class="option"><input type="radio" name="q4" value="b"> Hanya terjadi pada senyawa ionik</label>
+                            <label class="option"><input type="radio" name="q4" value="c"> Terjadi antara atom H dengan atom elektronegatif (F, O, N)</label>
+                            <label class="option"><input type="radio" name="q4" value="d"> Hanya terdapat pada logam</label>
+                        </div>
                     </div>
-                </div>
+                    <div class="question">
+                        <h3>Soal 5</h3>
+                        <p>Diantara pasangan senyaw berikut, manakah yang memiliki ikatan logam?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q5" value="a"> NaCl</label>
+                            <label class="option"><input type="radio" name="q5" value="b"> H2O</label>
+                            <label class="option"><input type="radio" name="q5" value="c"> Cu</label>
+                            <label class="option"><input type="radio" name="q5" value="d"> CO2</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>Soal 6</h3>
+                        <p>Senyawa berikut yang memiliki ikatan kovalen polar adalah?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q6" value="a"> Cl2</label>
+                            <label class="option"><input type="radio" name="q6" value="b"> HCl</label>
+                            <label class="option"><input type="radio" name="q6" value="c"> NaCl</label>
+                            <label class="option"><input type="radio" name="q6" value="d"> O2</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>Soal 7</h3>
+                        <p>Ikatan yang terjadi antar atom dalam molekul oksigen adalah?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q7" value="a"> Ikatan ion</label>
+                            <label class="option"><input type="radio" name="q7" value="b"> Ikatan Kovalen Tuggal</label>
+                            <label class="option"><input type="radio" name="q7" value="c"> Ikatan Kovalen Rangkap dua</label>
+                            <label class="option"><input type="radio" name="q7" value="d"> Ikatan Kovalen Kordinasi</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>Soal 8</h3>
+                        <p>Ikatan Kovalen Kordinasi Terdapat Pada Senyawa?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q8" value="a"> NH3</label>
+                            <label class="option"><input type="radio" name="q8" value="b"> H2O</label>
+                            <label class="option"><input type="radio" name="q8" value="c"> CO</label>
+                            <label class="option"><input type="radio" name="q8" value="d"> Cl2</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>Soal 9</h3>
+                        <p>Senyawa Yang Membentuk Ikatan ION adalah?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q9" value="a"> CO2</label>
+                            <label class="option"><input type="radio" name="q9" value="b"> KBr</label>
+                            <label class="option"><input type="radio" name="q9" value="c"> CH4</label>
+                            <label class="option"><input type="radio" name="q9" value="d"> NH3</label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>Soal 10</h3>
+                        <p>Dalam Ikatan Ion, Enrgi Kisi Diperlukan Untuk?</p>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q10" value="a"> Membentuk Ikatan logam</label>
+                            <label class="option"><input type="radio" name="q10" value="b"> Menarik Atom-Atom</label>
+                            <label class="option"><input type="radio" name="q10" value="c"> Menggabungkan Ion-ion Menjadi Struktur Kristal</label>
+                            <label class="option"><input type="radio" name="q10" value="d"> Memutuskan Ikatan ion</label>
+                        </div>
+                    </div>
+                    <button type="button" class="button" onclick="checkAnswers()">Submit</button>
+                </form>
+                <div id="result" class="result" style="display: none;"></div>
             </div>
-
-            <div class="question">
-                <h3>Soal 2</h3>
-                <p>Atom mana yang paling elektronegatif?</p>
-                <div class="options">
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2" value="a"> Fluor
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2" value="b"> Hidrogen
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2" value="c"> Karbon
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q2" value="d"> Oksigen
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question">
-                <h3>Soal 3</h3>
-                <p>Ikatan hidrogen terjadi antara atom H dan?</p>
-                <div class="options">
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3" value="a"> Atom elektronegatif seperti F, O, N
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3" value="b"> Atom logam
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3" value="c"> Atom hidrogen lainnya
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q3" value="d"> Atom ion negatif
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-        
-            <div class="question">
-                <h3>Soal 4</h3>
-                <p>Manakah pernyataan yang benar mengenai ikatan hidrogen?</p>
-                <div class="options">
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4" value="a"> Terjadi pada molekul non-polar
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4" value="b"> Hanya terjadi pada senyawa ionik
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4" value="c"> Terjadi antara atom H dengan atom elektronegatif (F, O, N)
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <input type="radio" name="q4" value="d"> Hanya terdapat pada logam
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </form>
-
-
-        <div id="result" class="result" style="display: none;"></div>
-        <button type="button" class="button" onclick="checkAnswers()">Submit</button>
-    </div>
-
+        </section>
+    </main>
     <script>
         function checkAnswers() {
             const correctAnswers = {
@@ -256,38 +234,74 @@
                 q2: 'a',
                 q3: 'a',
                 q4: 'c',
+                q5: 'c',
+                q6: 'b',
+                q7: 'c',
+                q8: 'c',
+                q9: 'b',
+                q10: 'c',
             };
 
             const explanations = {
                 q1: "Ikatan kovalen adalah ikatan yang melibatkan pasangan elektron bersama dan umumnya lebih kuat dari ikatan lainnya.",
                 q2: "Fluor adalah atom paling elektronegatif dalam tabel periodik.",
                 q3: "Ikatan hidrogen terjadi antara atom H dan atom elektronegatif seperti F, O, atau N.",
-                q4: "Ikatan hidrogen terjadi antara atom H dengan atom elektronegatif (F, O, N)."
+                q4: "Ikatan hidrogen terjadi antara atom H dengan atom elektronegatif (F, O, N).",
+                q5: "Cu (tembaga) adalah logam, sehingga memiliki ikatan logam.",
+                q6: "HCl memiliki perbedaan elektro negatifitas yang signifikan antara H dan Cl",
+                q7: "molekul O2 memiliki dua atom oksigen yang saling berbagi dua pasang elektronsehingga terbentuk Ikatan Kovaeln Rangkap Dua.",
+                q8: "Dalam CO Atom C Memberikan Pasangan Elektronnya Pada O, Membentuk Ikanat Kovalen Kordinasi.",
+                q9: "K Melepas Elektron Menjadi K+, Sedangkan Br Menerima Elektron Sehingga Menjadi Dr-, Ikatan ion terjadi Karena Gaya Tarik Antar K+ dan Br-. ",
+                q10: "Energi Kisi Adalah Energi Yang Dilepaskan Ketika Ion-ion Membentuk Struktur Ionik.",
             };
 
-            const form = document.getElementById('quizForm');
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = "";
             let score = 0;
-            const totalQuestions = Object.keys(correctAnswers).length;
+            let resultText = "<h3>Hasil Quiz:</h3>";
 
             for (let key in correctAnswers) {
-                const selected = form.elements[key] ? form.elements[key].value : null;
-                const isCorrect = selected === correctAnswers[key];
-
-                if (isCorrect) {
-                    score++;
+                const selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswers[key]) {
+                        score++;
+                        resultText += `<p><strong>Soal ${key.slice(1)}:</strong> Benar ✅</p>`;
+                    } else {
+                        resultText += `<p><strong>Soal ${key.slice(1)}:</strong> Salah ❌ <br> <small>Penjelasan: ${explanations[key]}</small></p>`;
+                    }
+                } else {
+                    resultText += `<p><strong>Soal ${key.slice(1)}:</strong> Tidak dijawab ❓</p>`;
                 }
-
-                const resultMessage = document.createElement('div');
-                resultMessage.className = `result ${isCorrect ? 'correct' : 'incorrect'}`;
-                resultMessage.innerHTML = `<strong>${isCorrect ? 'Benar!' : 'Salah!'}</strong> Jawaban yang benar: ${explanations[key]}`;
-                resultDiv.appendChild(resultMessage);
             }
 
-            resultDiv.innerHTML += `<p>Skor Anda: ${score} dari ${totalQuestions}</p>`;
-            resultDiv.style.display = 'block';
+            resultText += `<h3>Skor Anda: ${score} / ${Object.keys(correctAnswers).length}</h3>`;
+            
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = resultText;
+            resultDiv.style.display = "block";
         }
     </script>
+    <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Putri Andini</strong> <span></span></p>
+      </div>
+  
+    </footer>
+  
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!-- Preloader -->
+    <div id="preloader"></div>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>  
 </body>
 </html>

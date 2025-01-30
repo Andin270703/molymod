@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Pricing - Company Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Kuis Ikatan Kimia - Molymod</title>
+  <meta name="description" content="Kuis interaktif tentang ikatan kimia untuk meningkatkan pemahaman Anda.">
+  <meta name="keywords" content="kuis, ikatan kimia, kimia, pendidikan">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/lo.png" rel="icon">
+  <link href="assets/img/lo.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,48 +27,90 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .question {
+      margin: 20px 0;
+    }
+    .options {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .option {
+      margin: 5px 0;
+      display: block;
+    }
+    .option input {
+      margin-right: 10px;
+    }
+    .button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .correct {
+      background: #dff0d8;
+      border: 1px solid #d6e9c6;
+      color: #3c763d;
+    }
+    .incorrect {
+      background: #f2dede;
+      border: 1px solid #ebccd1;
+      color: #a94442;
+    }
+  </style>
 </head>
 
-<body class="pricing-page">
+<body class="about-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Company</h1><span>.</span>
+        <h1 class="sitename">Molymod</h1><span>.</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="about.html" class="active"><span>Materi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
+              <li><a href="testimonials.html">Kuis</a></li>
             </ul>
           </li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html" class="active">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="https://app.molview.com/">Simulasi</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -89,158 +131,133 @@
     <!-- Page Title -->
     <div class="page-title accent-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Pricing</h1>
+        <h1 class="mb-2 mb-lg-0">Kuis Ikatan Kimia</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Pricing</li>
+            <li class="current">Kuis</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-
+    <!-- Kuis Section -->
+    <section id="kuis" class="kuis section">
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
-              </ul>
+        <h1>Kuis Ikatan Kimia</h1>
+        <form id="quizForm">
+          <div class="question">
+            <h3>Soal 1</h3>
+            <p>Manakah ikatan terkuat di antara berikut ini?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q1" value="a"> Ikatan ion</label>
+              <label class="option"><input type="radio" name="q1" value="b"> Ikatan kovalen</label>
+              <label class="option"><input type="radio" name="q1" value="c"> Ikatan logam</label>
+              <label class="option"><input type="radio" name="q1" value="d"> Ikatan hidrogen</label>
             </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <p class="popular">Popular</p>
-              <h3>Business Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
-              </ul>
+          </div>
+          <div class="question">
+            <h3>Soal 2</h3>
+            <p>Atom mana yang paling elektronegatif?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q2" value="a"> Fluor</label>
+              <label class="option"><input type="radio" name="q2" value="b"> Hidrogen</label>
+              <label class="option"><input type="radio" name="q2" value="c"> Karbon</label>
+              <label class="option"><input type="radio" name="q2" value="d"> Oksigen</label>
             </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li><i class="bi bi-check"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
-              </ul>
+          </div>
+          <div class="question">
+            <h3>Soal 3</h3>
+            <p>Ikatan hidrogen terjadi antara atom H dan?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q3" value="a"> Atom elektronegatif seperti F, O, N</label>
+              <label class="option"><input type="radio" name="q3" value="b"> Atom logam</label>
+              <label class="option"><input type="radio" name="q3" value="c"> Atom hidrogen lainnya</label>
+              <label class="option"><input type="radio" name="q3" value="d"> Atom ion negatif</label>
             </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
+          </div>
+          <div class="question">
+            <h3>Soal 4</h3>
+            <p>Manakah pernyataan yang benar mengenai ikatan hidrogen?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q4" value="a"> Terjadi pada molekul non-polar</label>
+              <label class="option"><input type="radio" name="q4" value="b"> Hanya terjadi pada senyawa ionik</label>
+              <label class="option"><input type="radio" name="q4" value="c"> Terjadi antara atom H dengan atom elektronegatif (F, O, N)</label>
+              <label class="option"><input type="radio" name="q4" value="d"> Hanya terdapat pada logam</label>
+            </div>
+          </div>
+          <div class="question">
+            <h3>Soal 5</h3>
+            <p>Diantara pasangan senyaw berikut, manakah yang memiliki ikatan logam?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q5" value="a"> NaCl</label>
+              <label class="option"><input type="radio" name="q5" value="b"> H2O</label>
+              <label class="option"><input type="radio" name="q5" value="c"> Cu</label>
+              <label class="option"><input type="radio" name="q5" value="d"> CO2</label>
+            </div>
+          </div>
+          <div class="question">
+            <h3>Soal 6</h3>
+            <p>Senyawa berikut yang memiliki ikatan kovalen polar adalah?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q6" value="a"> Cl2</label>
+              <label class="option"><input type="radio" name="q6" value="b"> HCl</label>
+              <label class="option"><input type="radio" name="q6" value="c"> NaCl</label>
+              <label class="option"><input type="radio" name="q6" value="d"> O2</label>
+            </div>
+          </div>
+          <div class="question">
+            <h3>Soal 7</h3>
+            <p>Ikatan yang terjadi antar atom dalam molekul oksigen adalah?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q7" value="a"> Ikatan ion</label>
+              <label class="option"><input type="radio" name="q7" value="b"> Ikatan Kovalen Tuggal</label>
+              <label class="option"><input type="radio" name="q7" value="c"> Ikatan Kovalen Rangkap dua</label>
+              <label class="option"><input type="radio" name="q7" value="d"> Ikatan Kovalen Kordinasi</label>
+            </div>
+          </div>
+          <div class="question">
+            <h3>Soal 8</h3>
+            <p>Ikatan Kovalen Kordinasi Terdapat Pada Senyawa?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q8" value="a"> NH3</label>
+              <label class="option"><input type="radio" name="q8" value="b"> H2O</label>
+              <label class="option"><input type="radio" name="q8" value="c"> CO</label>
+              <label class="option"><input type="radio" name="q8" value="d"> Cl2</label>
+            </div>
+          </div>
+          <div class="question">
+            <h3>Soal 9</h3>
+            <p>Senyawa Yang Membentuk Ikatan ION adalah?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q9" value="a"> CO2</label>
+              <label class="option"><input type="radio" name="q9" value="b"> KBr</label>
+              <label class="option"><input type="radio" name="q9" value="c"> CH4</label>
+              <label class="option"><input type="radio" name="q9" value="d"> NH3</label>
+            </div>
+          </div>
+          <div class="question">
+            <h3>Soal 10</h3>
+            <p>Dalam Ikatan Ion, Enrgi Kisi Diperlukan Untuk?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q10" value="a"> Membentuk Ikatan logam</label>
+              <label class="option"><input type="radio" name="q10" value="b"> Menarik Atom-Atom</label>
+              <label class="option"><input type="radio" name="q10" value="c"> Menggabungkan Ion-ion Menjadi Struktur Kristal</label>
+              <label class="option"><input type="radio" name="q10" value="d"> Memutuskan Ikatan ion</label>
+            </div>
+          </div>
+          <button type="button" class="button" onclick="checkAnswers()">Submit</button>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
       </div>
-
-    </section><!-- /Pricing Section -->
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Company</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-
+  <footer>
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Company</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
-      </div>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Putri Andini</strong> <span></span></p>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -261,6 +278,59 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function checkAnswers() {
+      const correctAnswers = {
+        q1: 'b',
+        q2: 'a',
+        q3: 'a',
+        q4: 'c',
+        q5: 'c',
+        q6: 'b',
+        q7: 'c',
+        q8: 'c',
+        q9: 'b',
+        q10: 'c',
+      };
+
+      const explanations = {
+        q1: "Ikatan kovalen adalah ikatan yang melibatkan pasangan elektron bersama dan umumnya lebih kuat dari ikatan lainnya.",
+        q2: "Fluor adalah atom paling elektronegatif dalam tabel periodik.",
+        q3: "Ikatan hidrogen terjadi antara atom H dan atom elektronegatif seperti F, O, atau N.",
+        q4: "Ikatan hidrogen terjadi antara atom H dengan atom elektronegatif (F, O, N).",
+        q5: "Cu (tembaga) adalah logam, sehingga memiliki ikatan logam.",
+        q6: "HCl memiliki perbedaan elektro negatifitas yang signifikan antara H dan Cl",
+        q7: "molekul O2 memiliki dua atom oksigen yang saling berbagi dua pasang elektronsehingga terbentuk Ikatan Kovaeln Rangkap Dua.",
+        q8: "Dalam CO Atom C Memberikan Pasangan Elektronnya Pada O, Membentuk Ikanat Kovalen Kordinasi.",
+        q9: "K Melepas Elektron Menjadi K+, Sedangkan Br Menerima Elektron Sehingga Menjadi Dr-, Ikatan ion terjadi Karena Gaya Tarik Antar K+ dan Br-. ",
+        q10: "Energi Kisi Adalah Energi Yang Dilepaskan Ketika Ion-ion Membentuk Struktur Ionik.",
+      };
+
+      let score = 0;
+      let resultText = "<h3>Hasil Quiz:</h3>";
+
+      for (let key in correctAnswers) {
+        const selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+        if (selectedOption) {
+          if (selectedOption.value === correctAnswers[key]) {
+            score++;
+            resultText += `<p><strong>Soal ${key.slice(1)}:</strong> Benar ✅</p>`;
+          } else {
+            resultText += `<p><strong>Soal ${key.slice(1)}:</strong> Salah ❌ <br> <small>Penjelasan: ${explanations[key]}</small></p>`;
+          }
+        } else {
+          resultText += `<p><strong>Soal ${key.slice(1)}:</strong> Tidak dijawab ❓</p>`;
+        }
+      }
+
+      resultText += `<h3>Skor Anda: ${score} / ${Object.keys(correctAnswers).length}</h3>`;
+      
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = resultText;
+      resultDiv.style.display = "block";
+    }
+  </script>
 
 </body>
 
